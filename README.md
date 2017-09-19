@@ -1,4 +1,4 @@
-# BTC_stock_market
+# stock_exchange_project
 
 Standable script wich import from an abcbourse extract stock market datas, compute basic technical indidactors and retrun profitability of various trading strategy
 
