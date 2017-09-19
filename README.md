@@ -20,9 +20,11 @@ Description :
 	La classe Data possedes plusieurs attributs : 
 		des attributs standards : file, name, source, size
 		un attribut raw_data, inutile mais conservé, qui est une liste de liste avec toutes les datas
-		un attribut values qui est un dict reprenant les data spécifiques self.values["Price"], self.values["Date"] etc etc
+		un attribut values qui est un dict reprenant les data spécifiques self.values["Price"], 
+			self.values["Date"] etc etc
 		un attribut KPI qui est un dictionnaire de dictionnaire.
-			pour chaque stratégie testée, il enregistre la performance générée ["value"], les ordres d'achats ["buy"], et de vente ["buy"] 
+			pour chaque stratégie testée, il enregistre la performance générée ["value"], les ordres
+			d'achats ["buy"], et de vente ["buy"] 
 
 	Enfin le script 
 	Il recompile le tout dans un nouveau fichier CSV. 
