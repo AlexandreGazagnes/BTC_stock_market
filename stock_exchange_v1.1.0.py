@@ -51,9 +51,9 @@ Next :
 	quid de l'utilité des OrderDict()
 
 
-Version :	1.0.2
+Version :	1.1.0
 
-Date 	:	18/09/2017
+Date 	:	25/09/2017
 
 Auteur 	: 	Alexandre GAZAGNES
 
