@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+	# -*- coding: utf-8 -*-
 
 ###########################
 ###########################
@@ -69,6 +69,8 @@ class StockData :
 
 		self.price_volatility = dict()
 		self.volume_volatility = dict()
+
+		self.upgrade()
 
 
 	def extract_file(self):
@@ -319,6 +321,7 @@ class StockData :
 		self.add_KPI()
 		self.add_price_volatility()
 		self.add_volume_volatility()
+		self.raw_data = "supprimé dans self.upgrade()"
 
 
 	def save_csv(self, file_name=DEFAULT_FILENAME, sep=SEP,coma_vs_point=True): 
@@ -371,9 +374,8 @@ class StockData :
 if __name__ == '__main__':
 
 	data = StockData(file=DEFAULT_FILENAME)
-	data.upgrade()
 	data2 = StockData(file="AC.csv", directory= "/home/alex/stock_exchange_project/v1.1.1/Quotes/CAC40")
-	data2.upgrade()
+
 
 
 
