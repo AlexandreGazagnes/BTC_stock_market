@@ -29,7 +29,10 @@ from StockData import *
 		
 class StockResume: 
 
-	def __init__(self, data): 
+	def __init__(self, data, *keep_other_info_list):
+		"""
+		blabla
+		""" 
 
 		self.name = data.name
 		# self.source = data.source 
@@ -42,6 +45,10 @@ class StockResume:
 		self.KPI = data.KPI
 		self.price_volatility = data.price_volatility
 		self.volume_volatility = data.volume_volatility
+
+		if keep_other_info_list : 
+			self.val_data {str(i) : data.val_data[str(i)] for i in keep_other_info_list}
+
 
 	def __repr__(self) :
 		"""
