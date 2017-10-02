@@ -8,6 +8,9 @@
 ##########################
 ##########################
 
+#########################
+# 	SUMMARY
+#########################
 
 #########################
 # 	IMPORT
@@ -17,9 +20,12 @@ from StockData import *
 
 
 #########################
-# 	CLASSES
+# 	VAR & CONST
 #########################
 
+#########################
+# 	CLASSES
+#########################
 		
 class StockResume: 
 
@@ -50,6 +56,9 @@ self.name, self.info, self.KPI, self.price_volatility,
 self.volume_volatility)
 		return text
 
+#########################
+# 	FUNCTIONS
+#########################
 
 #########################
 # 	MAIN
@@ -60,3 +69,7 @@ if __name__ == '__main__':
 	data = StockData(file=DEFAULT_FILENAME)
 	data.upgrade()
 	data2 = StockResume(data)
+
+	data3 = StockData(file="AC.csv", directory= "/home/alex/stock_exchange_project/v1.1.1/Quotes/CAC40")
+	data3.upgrade()
+	data4 = StockResume(data3)
