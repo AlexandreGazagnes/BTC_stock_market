@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+	# -*- coding: utf-8 -*-
 
 ###########################
 ###########################
@@ -8,6 +8,9 @@
 ###########################
 ###########################
 
+#########################
+# 	SUMMARY
+#########################
 
 #########################
 # 	IMPORT
@@ -16,7 +19,6 @@
 import os
 from collections import OrderedDict
 from math import sqrt, log
-
 
 
 #########################
@@ -29,7 +31,6 @@ SEP = ";"
 NB_LOCAL_MIN_MAX = 10
 
 
-
 #########################
 #	CLASSES
 #########################
@@ -40,12 +41,13 @@ class StockData :
 	"""
 
 	def __init__(self, file="test.csv", directory=os.getcwd(), source="abcbourse", 
-		file_format="csv", periodicity="day"): 
+		file_format="csv"): 
 		"""
 		init method
 		"""
 
-		self.init_directory = self.source_directory = os.getcwd()
+		self.init_directory = os.getcwd()
+		self.source_directory = os.getcwd()
 		if directory != os.getcwd() : self.source_directory = directory
 		self.file = file
 		self.file_format = file_format
@@ -55,7 +57,10 @@ class StockData :
 		self.size = 0
 		self.start_date = str()
 		self.end_date = str()
-		self.periodicity = periodicity
+		self.periodicity = str()
+
+		# --> Manage number days between start and end. 
+		# if number/days / self.size = 1.0 => days
 		
 		self.raw_data = list()
 		self.val_data = OrderedDict()
@@ -356,6 +361,10 @@ class StockData :
 
 
 #########################
+# 	FUNCTIONS
+#########################
+
+#########################
 # 	MAIN
 #########################
 
@@ -363,5 +372,8 @@ if __name__ == '__main__':
 
 	data = StockData(file=DEFAULT_FILENAME)
 	data.upgrade()
+	data2 = StockData(file="AC.csv", directory= "/home/alex/stock_exchange_project/v1.1.1/Quotes/CAC40")
+	data2.upgrade()
+
 
 
